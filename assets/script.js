@@ -5,6 +5,21 @@
 
 // });
 $(function () {
+ // TODO: Add code to display the current date in the header of the page.
+  
+ const date = new Date();
+ const formatDate = new Intl.DateTimeFormat("en-us",{
+   dateStyle:"full"
+ });
+ document.getElementById('currentDay').textContent = formatDate.format(date);
+  let hourofDay = date.getHours();
+
+  document.getElementById('currentHour').
+  textContent = hourofDay;
+
+
+
+
 
 /* this will save the information for 9am appointments.*/
   const show9AMappt = document.getElementById('appointmentFor9');
@@ -97,30 +112,43 @@ inputField.value = storedValue;
   // the values of the corresponding textarea elements. HINT: How can the id
   // attribute of each time-block be used to do this?
   //
-  // TODO: Add code to display the current date in the header of the page.
-  
-  const date = new Date();
-  const formatDate = new Intl.DateTimeFormat("en-us",{
-    dateStyle:"full"
-  })
-  document.getElementById('currentDay').textContent = formatDate.format(date);
+ /*this will add the appropriate class of past/present/future for 9AM.*/
+if (date.getHours()=='9') {
+  $('#appointmentFor9').addClass('present');
+} else {
+  $('#appointmentFor9').addClass('future');
+};
 
-  let hourofDay = date.getHours();
-  document.getElementById('currentHour').
-  textContent = hourofDay;
+if (date.getHours()=='10') {
+  $('#appointmentFor10').addClass('present');
+} else if(date.getHours()=='9'){
+  $('#appointmentFor10').addClass('past');
+} else {
+  $('#appointmentFor10').addClass('future');
+};
 
-  // function convertTo12HourFormat(time) {
-  //   let hour = time.getHours();
-  //   let minute = time.getMinutes();
-  //   let period = hour >= 12 ? 'PM' : 'AM';
-  
-  //   hour = hour % 12;
-  //   hour = hour ? hour : 12; // If hour is 0, set it to 12
-  
-  //   return `${hour}:${minute.toString().padStart(2, '0')} ${period}`;
-  // }
-  
-  // const currentTime = new Date();
-  // const formattedTime = convertTo12HourFormat(currentTime);
+if (date.getHours()=='11') {
+  $('#appointmentFor11').addClass('present');
+} else if(date.getHours()=='9'||'10'){
+  $('#appointmentFor11').addClass('past');
+} else {
+  $('#appointmentFor11').addClass('future');
+};
+
+if (date.getHours()=='12') {
+  $('#appointmentFor12').addClass('present');
+} else if(date.getHours()=='9'||'10'||'11'){
+  $('#appointmentFor12').addClass('past');
+} else {
+  $('#appointmentFor12').addClass('future');
+};
+
+if (date.getHours()=='12') {
+  $('#appointmentFor12').addClass('present');
+} else if(date.getHours()=='9'||'10'||'11'){
+  $('#appointmentFor12').addClass('past');
+} else {
+  $('#appointmentFor12').addClass('future');
+};
 
 });
