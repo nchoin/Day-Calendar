@@ -12,8 +12,9 @@ $(function () {
    dateStyle:"full"
  });
  document.getElementById('currentDay').textContent = formatDate.format(date);
-  let hourofDay = date.getHours();
 
+//  const d =new Date();
+  let hourofDay = date.getHours();
   document.getElementById('currentHour').
   textContent = hourofDay;
 
@@ -121,7 +122,7 @@ if (date.getHours()=='10') {
 
 if (date.getHours()=='11') {
   $('#appointmentFor11').addClass('present');
-} else if(date.getHours()=='9'||'10'){
+} else if(date.getHours()=='9'||date.getHours()=='10'){
   $('#appointmentFor11').addClass('future');
 } else {
   $('#appointmentFor11').addClass('past');
@@ -130,34 +131,34 @@ if (date.getHours()=='11') {
 
 if (date.getHours()=='12') {
   $('#appointmentFor12').addClass('present');
-} else if(date.getHours()=='9'||'10'||'11'){
+} else if(date.getHours()=='9'||date.getHours()=='10'||date.getHours()=='11'){
   $('#appointmentFor12').addClass('future');
 } else {
   $('#appointmentFor12').addClass('past');
 };
 
  /*this will add the appropriate class of past/present/future for 1PM.*/
-if (date.getHours()=='1') {
+if (date.getHours()=='13') {
   $('#appointmentFor1').addClass('present');
-} else if(date.getHours()=='9'||'10'||'11'||'12'){
+} else if(date.getHours()=='9'||date.getHours()=='10'||date.getHours()=='11'||date.getHours()=='12'){
   $('#appointmentFor1').addClass('future');
 } else {
   $('#appointmentFor1').addClass('past');
 };
 
  /*this will add the appropriate class of past/present/future for 2PM.*/
-if (date.getHours()=='2') {
+if (date.getHours()=='14') {
   $('#appointmentFor2').addClass('present');
-} else if(date.getHours()=='9'||'10'||'11'||'12'||'1'){
+} else if(date.getHours()=='9'||date.getHours()=='10'||date.getHours()=='11'||date.getHours()=='12'||date.getHours()=='1'){
   $('#appointmentFor2').addClass('future');
 } else {
   $('#appointmentFor2').addClass('past');
 };
 
  /*this will add the appropriate class of past/present/future for 3PM.*/
-if (date.getHours()=='3') {
+if (date.getHours()=='15') {
   $('#appointmentFor3').addClass('present');
-} else if(date.getHours()=='9'||'10'||'11'||'12'||'1'||'2'){
+} else if(date.getHours()=='9'||date.getHours()=='10'||date.getHours()=='11'||date.getHours()=='12'||date.getHours()=='13'||date.getHours()=='14'){
   $('#appointmentFor3').addClass('future');
 } else {
   $('#appointmentFor3').addClass('past');
@@ -165,16 +166,16 @@ if (date.getHours()=='3') {
 
 
  /*this will add the appropriate class of past/present/future for 4PM.*/
-if (date.getHours()=='4') {
+if (date.getHours()=='16') {
   $('#appointmentFor4').addClass('present');
-} else if(date.getHours()=='9'||'10'||'11'||'12'||'1'||'2'||'3'){
+} else if(date.getHours()=='9'||date.getHours()=='10'||date.getHours()=='11'||date.getHours()=='12'||date.getHours()=='13'||date.getHours()=='14'||date.getHours()=='15'){
   $('#appointmentFor4').addClass('future');
 } else {
   $('#appointmentFor4').addClass('past');
 };
 
  /*this will add the appropriate class of past/present/future for 5PM.*/
-if (date.getHours()=='5') {
+if (date.getHours()=='17') {
   $('#appointmentFor5').addClass('present');
 // } else if(date.getHours()=='9'||'10'||'11'||'12'||'1'||'2'||'3'||'4'){
   // $('#appointmentFor5').addClass('future');
