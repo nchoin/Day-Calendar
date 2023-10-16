@@ -1,9 +1,9 @@
 // Wrap all code that interacts with the DOM in a call to jQuery to ensure that
 // the code isn't run until the browser has finished rendering all the elements
 // in the html. To do this wrap ALL jQuery and JS in lines4 -6
-// $(document).ready(function(){
+$(document).ready(function(){
 
-// });
+
 $(function () {
  // TODO: Add code to display the current date in the header of the page.
   
@@ -18,9 +18,6 @@ $(function () {
   textContent = hourofDay;
 
 
-
-
-
 /* this will save the information for 9am appointments.*/
   const show9AMappt = document.getElementById('appointmentFor9');
   document.getElementById('saveBtnFor9').addEventListener('click',function(){window.localStorage.setItem('appointment information9', show9AMappt.value);
@@ -28,6 +25,16 @@ $(function () {
   var storedValue = localStorage.getItem('appointment information9');
   var inputField = document.getElementById('appointmentFor9');
 inputField.value = storedValue;
+
+// tried to convert to jquery but the value wouldn't store
+// const show9AMappt = $('#appointmentFor9');
+// $('#saveBtnFor9').click(function(){window.localStorage.setItem('appointment information9', show9AMappt.value);
+// });
+// var storedValue = localStorage.getItem('appointment information9');
+// var inputField = $('#appointmentFor9');
+// inputField.value = storedValue;
+
+
 
 /* this will save the information for 10am appointments.*/
   const show10AMappt = document.getElementById('appointmentFor10');
@@ -94,61 +101,87 @@ document.getElementById('saveBtnFor5').addEventListener('click',function(){windo
 var storedValue = localStorage.getItem('appointment information5');
 var inputField = document.getElementById('appointmentFor5');
 inputField.value = storedValue;
-  // TODO: Add a listener for click events on the save button. This code should
-  // use the id in the containing time-block as a key to save the user input in
-  // local storage. HINT: What does `this` reference in the click listener
-  // function? How can DOM traversal be used to get the "hour-x" id of the
-  // time-block containing the button that was clicked? How might the id be
-  // useful when saving the description in local storage?
 
-  //
-  // TODO: Add code to apply the past, present, or future class to each time
-  // block by comparing the id to the current hour. HINTS: How can the id
-  // attribute of each time-block be used to conditionally add or remove the
-  // past, present, and future classes? How can Day.js be used to get the
-  // current hour in 24-hour time?
-  //
-  // TODO: Add code to get any user input that was saved in localStorage and set
-  // the values of the corresponding textarea elements. HINT: How can the id
-  // attribute of each time-block be used to do this?
-  //
+
  /*this will add the appropriate class of past/present/future for 9AM.*/
 if (date.getHours()=='9') {
   $('#appointmentFor9').addClass('present');
 } else {
-  $('#appointmentFor9').addClass('future');
+  $('#appointmentFor9').addClass('past');
 };
-
+ /*this will add the appropriate class of past/present/future for 10AM.*/
 if (date.getHours()=='10') {
   $('#appointmentFor10').addClass('present');
 } else if(date.getHours()=='9'){
-  $('#appointmentFor10').addClass('past');
-} else {
   $('#appointmentFor10').addClass('future');
+} else {
+  $('#appointmentFor10').addClass('past');
 };
+ /*this will add the appropriate class of past/present/future for 11AM.*/
 
 if (date.getHours()=='11') {
   $('#appointmentFor11').addClass('present');
 } else if(date.getHours()=='9'||'10'){
-  $('#appointmentFor11').addClass('past');
-} else {
   $('#appointmentFor11').addClass('future');
+} else {
+  $('#appointmentFor11').addClass('past');
 };
+ /*this will add the appropriate class of past/present/future for 12PM.*/
 
 if (date.getHours()=='12') {
   $('#appointmentFor12').addClass('present');
 } else if(date.getHours()=='9'||'10'||'11'){
-  $('#appointmentFor12').addClass('past');
-} else {
   $('#appointmentFor12').addClass('future');
+} else {
+  $('#appointmentFor12').addClass('past');
 };
 
-if (date.getHours()=='12') {
-  $('#appointmentFor12').addClass('present');
-} else if(date.getHours()=='9'||'10'||'11'){
-  $('#appointmentFor12').addClass('past');
+ /*this will add the appropriate class of past/present/future for 1PM.*/
+if (date.getHours()=='1') {
+  $('#appointmentFor1').addClass('present');
+} else if(date.getHours()=='9'||'10'||'11'||'12'){
+  $('#appointmentFor1').addClass('future');
 } else {
-  $('#appointmentFor12').addClass('future');
+  $('#appointmentFor1').addClass('past');
 };
 
+ /*this will add the appropriate class of past/present/future for 2PM.*/
+if (date.getHours()=='2') {
+  $('#appointmentFor2').addClass('present');
+} else if(date.getHours()=='9'||'10'||'11'||'12'||'1'){
+  $('#appointmentFor2').addClass('future');
+} else {
+  $('#appointmentFor2').addClass('past');
+};
+
+ /*this will add the appropriate class of past/present/future for 3PM.*/
+if (date.getHours()=='3') {
+  $('#appointmentFor3').addClass('present');
+} else if(date.getHours()=='9'||'10'||'11'||'12'||'1'||'2'){
+  $('#appointmentFor3').addClass('future');
+} else {
+  $('#appointmentFor3').addClass('past');
+};
+
+
+ /*this will add the appropriate class of past/present/future for 4PM.*/
+if (date.getHours()=='4') {
+  $('#appointmentFor4').addClass('present');
+} else if(date.getHours()=='9'||'10'||'11'||'12'||'1'||'2'||'3'){
+  $('#appointmentFor4').addClass('future');
+} else {
+  $('#appointmentFor4').addClass('past');
+};
+
+ /*this will add the appropriate class of past/present/future for 5PM.*/
+if (date.getHours()=='5') {
+  $('#appointmentFor5').addClass('present');
+// } else if(date.getHours()=='9'||'10'||'11'||'12'||'1'||'2'||'3'||'4'){
+  // $('#appointmentFor5').addClass('future');
+} else {
+  $('#appointmentFor5').addClass('future');
+};
+// closes the function for page
+});
+// closes the document.ready function() the very beginning.
 });
