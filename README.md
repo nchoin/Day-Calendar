@@ -16,8 +16,11 @@ I gained a better understanding of local storage and the syntax of jQuery. I use
 The calendar runs via the browser and local storage. Here is the [link](https://nchoin.github.io/Day-Calendar/)
 ## Usage
 You can add appointments in the main text fields. To save these to the calendar you MUST click the save button. If you need to edit any appointments or delete an appointment, click in the field, make the changes and click save again.
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative file path, add it to your README using the following syntax:
-![alt text](assets/images/screenshot.png)
+This is a screenshot of the [calendar on an iPad](./assets/screenshots/dayCalendariPad.png)
+
+This is a screenshot of the [calendar on Hub](/assets/screenshots/dayCalendarHub.png)
+
+
 ## Credits
 Thank you to the following people who helped me think through my code, answered my questions and offered suggestions:  
 
