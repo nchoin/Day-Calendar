@@ -9,13 +9,15 @@ $(function () {
   
  const date = dayjs().format('dddd, MMMM D, YYYY');
  document.getElementById('currentDay').textContent = date;
-//  const date = new Date();
+//  JS version
+ //  const date = new Date();
 //  const formatDate = new Intl.DateTimeFormat("en-us",{
 //    dateStyle:"full"
 //  });
 //  document.getElementById('currentDay').textContent = formatDate.format(date);
 
-//  const d =new Date();
+//  JS version
+// const d =new Date();
   // let hourofDay = date.getHours();
   // document.getElementById('currentHour').
   // textContent = hourofDay;
@@ -115,15 +117,17 @@ inputField.value = storedValue;
 // } else {
 //   $('#appointmentFor9').addClass('past');
 // };
-if (hourofDay =='9') {
+if (hourofDay == '9') {
   $('#appointmentFor9').addClass('present');
+}else if(hourofDay =='1'||hourofDay =='2'||hourofDay =='3'||hourofDay =='4'||hourofDay =='5'||hourofDay =='6'||hourofDay =='7'||hourofDay =='8'){
+  $('#appointmentFor9').addClass('future');
 } else {
   $('#appointmentFor9').addClass('past');
 };
  /*this will add the appropriate class of past/present/future for 10AM.*/
 if (hourofDay =='10') {
   $('#appointmentFor10').addClass('present');
-} else if(hourofDay =='9'){
+} else if(hourofDay =='1'||hourofDay =='2'||hourofDay =='3'||hourofDay =='4'||hourofDay =='5'||hourofDay =='6'||hourofDay =='7'||hourofDay =='8'||hourofDay =='9'){
   $('#appointmentFor10').addClass('future');
 } else {
   $('#appointmentFor10').addClass('past');
@@ -132,7 +136,7 @@ if (hourofDay =='10') {
 
 if (hourofDay =='11') {
   $('#appointmentFor11').addClass('present');
-} else if(hourofDay =='9'||hourofDay =='10'){
+} else if(hourofDay =='1'||hourofDay =='2'||hourofDay =='3'||hourofDay =='4'||hourofDay =='5'||hourofDay =='6'||hourofDay =='7'||hourofDay =='8'||hourofDay =='9'||hourofDay =='10'){
   $('#appointmentFor11').addClass('future');
 } else {
   $('#appointmentFor11').addClass('past');
@@ -141,7 +145,7 @@ if (hourofDay =='11') {
 
 if (hourofDay =='12') {
   $('#appointmentFor12').addClass('present');
-} else if(hourofDay =='9'||hourofDay =='10'||hourofDay =='11'){
+} else if(hourofDay =='1'||hourofDay =='2'||hourofDay =='3'||hourofDay =='4'||hourofDay =='5'||hourofDay =='6'||hourofDay =='7'||hourofDay =='8'||hourofDay =='9'||hourofDay =='10'||hourofDay =='11'){
   $('#appointmentFor12').addClass('future');
 } else {
   $('#appointmentFor12').addClass('past');
@@ -150,7 +154,7 @@ if (hourofDay =='12') {
  /*this will add the appropriate class of past/present/future for 1PM.*/
 if (hourofDay =='13') {
   $('#appointmentFor1').addClass('present');
-} else if(hourofDay =='9'||hourofDay =='10'||hourofDay =='11'||hourofDay =='12'){
+} else if(hourofDay =='1'||hourofDay =='2'||hourofDay =='3'||hourofDay =='4'||hourofDay =='5'||hourofDay =='6'||hourofDay =='7'||hourofDay =='8'||hourofDay =='9'||hourofDay =='10'||hourofDay =='11'||hourofDay =='12'){
   $('#appointmentFor1').addClass('future');
 } else {
   $('#appointmentFor1').addClass('past');
@@ -159,7 +163,7 @@ if (hourofDay =='13') {
  /*this will add the appropriate class of past/present/future for 2PM.*/
 if (hourofDay =='14') {
   $('#appointmentFor2').addClass('present');
-} else if(hourofDay =='9'||hourofDay =='10'||hourofDay =='11'||hourofDay =='12'||hourofDay =='1'){
+} else if(hourofDay =='1'||hourofDay =='2'||hourofDay =='3'||hourofDay =='4'||hourofDay =='5'||hourofDay =='6'||hourofDay =='7'||hourofDay =='8'||hourofDay =='9'||hourofDay =='10'||hourofDay =='11'||hourofDay =='12'||hourofDay =='13'){
   $('#appointmentFor2').addClass('future');
 } else {
   $('#appointmentFor2').addClass('past');
@@ -168,7 +172,7 @@ if (hourofDay =='14') {
  /*this will add the appropriate class of past/present/future for 3PM.*/
 if (hourofDay =='15') {
   $('#appointmentFor3').addClass('present');
-} else if(hourofDay =='9'||hourofDay =='10'||hourofDay =='11'||hourofDay =='12'||hourofDay =='13'||hourofDay =='14'){
+} else if(hourofDay =='1'||hourofDay =='2'||hourofDay =='3'||hourofDay =='4'||hourofDay =='5'||hourofDay =='6'||hourofDay =='7'||hourofDay =='8'||hourofDay =='9'||hourofDay =='10'||hourofDay =='11'||hourofDay =='12'||hourofDay =='13'||hourofDay =='14'){
   $('#appointmentFor3').addClass('future');
 } else {
   $('#appointmentFor3').addClass('past');
@@ -178,7 +182,7 @@ if (hourofDay =='15') {
  /*this will add the appropriate class of past/present/future for 4PM.*/
 if (hourofDay =='16') {
   $('#appointmentFor4').addClass('present');
-} else if(hourofDay =='9'||hourofDay =='10'||hourofDay =='11'||hourofDay =='12'||hourofDay =='13'||hourofDay =='14'||hourofDay =='15'){
+} else if(hourofDay =='1'||hourofDay =='2'||hourofDay =='3'||hourofDay =='4'||hourofDay =='5'||hourofDay =='6'||hourofDay =='7'||hourofDay =='8'||hourofDay =='9'||hourofDay =='10'||hourofDay =='11'||hourofDay =='12'||hourofDay =='13'||hourofDay =='14'||hourofDay =='15'){
   $('#appointmentFor4').addClass('future');
 } else {
   $('#appointmentFor4').addClass('past');
@@ -187,10 +191,10 @@ if (hourofDay =='16') {
  /*this will add the appropriate class of past/present/future for 5PM.*/
 if (hourofDay =='17') {
   $('#appointmentFor5').addClass('present');
-// } else if(date.getHours()=='9'||'10'||'11'||'12'||'1'||'2'||'3'||'4'){
-  // $('#appointmentFor5').addClass('future');
-} else {
+} else if(hourofDay =='1'||hourofDay =='2'||hourofDay =='3'||hourofDay =='4'||hourofDay =='5'||hourofDay =='6'||hourofDay =='7'||hourofDay =='8'||hourofDay =='9'||hourofDay =='10'||hourofDay =='11'||hourofDay =='12'||hourofDay =='13'||hourofDay =='14'||hourofDay =='15'||hourofDay =='16'){
   $('#appointmentFor5').addClass('future');
+} else {
+  $('#appointmentFor5').addClass('past');
 };
 // closes the function for page
 });
