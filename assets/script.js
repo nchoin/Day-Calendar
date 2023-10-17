@@ -7,7 +7,7 @@ $(document).ready(function(){
 $(function () {
  // TODO: Add code to display the current date in the header of the page.
   
- const date = dayjs().format('dddd, MMMM d, YYYY');
+ const date = dayjs().format('dddd, MMMM D, YYYY');
  document.getElementById('currentDay').textContent = date;
 //  const date = new Date();
 //  const formatDate = new Intl.DateTimeFormat("en-us",{
