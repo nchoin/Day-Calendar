@@ -17,9 +17,9 @@ The calendar runs via the browser and local storage. Here is the [link](https://
 ## Usage
 You can add appointments in the main text fields. To save these to the calendar you MUST click the save button. If you need to edit any appointments or delete an appointment, click in the field, make the changes and click save again.
 
-This is a screenshot of the [calendar on an iPad](./assets/screenshots/dayCalendariPad.png)
+This is a screenshot of the ![calendar on an iPad](./assets/screenshots/dayCalendariPad.png)
 
-This is a screenshot of the [calendar on Hub](/assets/screenshots/dayCalendarHub.png)
+This is a screenshot of the ![calendar on Hub](/assets/screenshots/dayCalendarHub.png)
 
 
 ## Credits
